@@ -16,8 +16,9 @@ startBtn.addEventListener("click", function () {
 
 
     // 일본어 페이지인지 확인
-    const isJapanese =
-        window.location.pathname.includes("_jp.html");
+	// 일본어 페이지인지 확인
+	const isJapanese =
+	    document.documentElement.lang === "ja";
 
 		//오류로 인한 임시코드
 		console.log("pathname:", window.location.pathname);
