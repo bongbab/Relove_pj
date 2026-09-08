@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>RE:LOVE | 復縁占いの結果</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<header class="language-header">
+
+    <a href="main.html" id="koLink">
+        <svg class="flag-icon" viewBox="0 0 36 24" aria-hidden="true">
+            <rect width="36" height="24" fill="#fff"/>
+            <circle cx="18" cy="12" r="6" fill="#cd2e3a"/>
+            <path d="M12 12a6 6 0 0 0 12 0a6 3 0 0 1-12 0z" fill="#0047a0"/>
+        </svg>
+        한국어
+    </a>
+
+    <span class="language-divider">|</span>
+
+    <a href="main_jp.html" id="jpLink">
+        <svg class="flag-icon" viewBox="0 0 36 24" aria-hidden="true">
+            <rect width="36" height="24" fill="#fff"/>
+            <circle cx="18" cy="12" r="6" fill="#bc002d"/>
+        </svg>
+        日本語
+    </a>
+
+</header>
+
+<body class="jp">
+
+    <main class="result-page">
+
+        <section class="result-container">
+
+            <div class="result-content">
+
+                <!-- 左側：カード -->
+                <div class="result-card-area">
+
+                    <img
+                        id="resultCardImage"
+                        src=""
+                        alt="選んだタロットカード"
+                        class="result-card-image"
+                    >
+
+                </div>
+
+
+                <!-- 右側：鑑定結果 -->
+                <div class="result-reading">
+
+                    <h2 id="resultCardName"></h2>
+
+                    <div class="reading-item">
+                        <h3>💗 復縁の可能性</h3>
+                        <p id="reunion"></p>
+                    </div>
+
+                    <div class="reading-item">
+                        <h3>相手の気持ち</h3>
+                        <p id="mind"></p>
+                    </div>
+
+                    <div class="reading-item">
+                        <h3>現在の流れ</h3>
+                        <p id="flow"></p>
+                    </div>
+
+                    <div class="reading-item">
+                        <h3>アドバイス</h3>
+                        <p id="advice"></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-buttons">
+
+                <button
+                    type="button"
+                    onclick="location.href='tarot_jp.html'">
+                    もう一度占う
+                </button>
+
+                <button
+                    type="button"
+                    onclick="location.href='index_jp.html'">
+                    最初から
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/result.js"></script>
+
+</body>
+
+</html>

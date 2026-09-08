@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>RE:LOVE | 타로 결과</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<header class="language-header">
+
+    <a href="main.html" id="koLink">
+        <svg class="flag-icon" viewBox="0 0 36 24" aria-hidden="true">
+            <rect width="36" height="24" fill="#fff"/>
+            <circle cx="18" cy="12" r="6" fill="#cd2e3a"/>
+            <path d="M12 12a6 6 0 0 0 12 0a6 3 0 0 1-12 0z" fill="#0047a0"/>
+        </svg>
+        한국어
+    </a>
+
+    <span class="language-divider">|</span>
+
+    <a href="main_jp.html" id="jpLink">
+        <svg class="flag-icon" viewBox="0 0 36 24" aria-hidden="true">
+            <rect width="36" height="24" fill="#fff"/>
+            <circle cx="18" cy="12" r="6" fill="#bc002d"/>
+        </svg>
+        日本語
+    </a>
+
+</header>
+
+<body>
+
+    <main class="result-page">
+
+        <section class="result-container">
+
+            <div class="result-content">
+
+                <!-- 왼쪽 카드 이미지 -->
+                <div class="result-card-area">
+
+                    <img
+                        id="resultCardImage"
+                        src=""
+                        alt="선택한 타로 카드"
+                        class="result-card-image"
+                    >
+
+                </div>
+
+
+                <!-- 오른쪽 해석 -->
+                <div class="result-reading">
+
+                    <h2 id="resultCardName"></h2>
+
+                    <div class="reading-item">
+                        <h3>💗 재회 가능성</h3>
+                        <p id="reunion"></p>
+                    </div>
+
+                    <div class="reading-item">
+                        <h3>상대의 마음</h3>
+                        <p id="mind"></p>
+                    </div>
+
+                    <div class="reading-item">
+                        <h3>현재 흐름</h3>
+                        <p id="flow"></p>
+                    </div>
+
+                    <div class="reading-item">
+                        <h3>Advice</h3>
+                        <p id="advice"></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 버튼은 content 바깥 -->
+            <div class="result-buttons">
+
+                <button
+                    type="button"
+                    onclick="location.href='tarot.html'">
+                    다시 뽑기
+                </button>
+
+                <button
+                    type="button"
+                    onclick="location.href='index.html'">
+                    처음부터 다시
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/result.js"></script>
+
+</body>
+
+</html>

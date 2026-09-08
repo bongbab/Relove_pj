@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>RE:LOVE | 카드 선택</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<header class="language-header">
+
+    <a href="main.html" id="koLink">
+        <svg class="flag-icon" viewBox="0 0 36 24" aria-hidden="true">
+            <rect width="36" height="24" fill="#fff"/>
+            <circle cx="18" cy="12" r="6" fill="#cd2e3a"/>
+            <path d="M12 12a6 6 0 0 0 12 0a6 3 0 0 1-12 0z" fill="#0047a0"/>
+        </svg>
+        한국어
+    </a>
+
+    <span class="language-divider">|</span>
+
+    <a href="main_jp.html" id="jpLink">
+        <svg class="flag-icon" viewBox="0 0 36 24" aria-hidden="true">
+            <rect width="36" height="24" fill="#fff"/>
+            <circle cx="18" cy="12" r="6" fill="#bc002d"/>
+        </svg>
+        日本語
+    </a>
+
+</header>
+
+<body>
+
+    <main class="tarot-page">
+
+        <section class="tarot-container">
+
+            <div class="tarot-header">
+
+                
+
+                <h1>마음이 끌리는 카드 한 장을 선택해주세요.</h1>
+
+                <p class="tarot-description">
+                    당신의 질문을 마음속으로 떠올리며<br>
+                    가장 끌리는 카드 한 장을 선택해주세요.
+                </p>
+
+            </div>
+
+
+            <div class="tarot-info">
+                선택한 카드
+                <strong id="selectedCount">0</strong>
+                / 1
+            </div>
+
+
+            <section id="cardArea"
+                     class="card-grid">
+                <!-- JavaScript에서 22장 생성 -->
+            </section>
+
+
+            <div class="tarot-buttons">
+
+                <button type="button"
+                        id="shuffleBtn"
+                        class="secondary-btn">
+                    다시 섞기
+                </button>
+
+                <button type="button"
+                        id="resultBtn"
+                        class="primary-btn">
+                    결과 보기
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/tarot.js"></script>
+
+</body>
+</html>
