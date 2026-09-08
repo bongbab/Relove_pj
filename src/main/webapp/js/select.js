@@ -19,7 +19,11 @@ startBtn.addEventListener("click", function () {
     const isJapanese =
         window.location.pathname.includes("_jp.html");
 
-
+		//오류로 인한 임시코드
+		console.log("pathname:", window.location.pathname);
+		console.log("isJapanese:", isJapanese)
+		
+		
     // 둘 중 하나라도 선택하지 않았다면
     if (!relationship || !question) {
 
