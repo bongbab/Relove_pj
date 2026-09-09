@@ -73,7 +73,9 @@ body {
     justify-content: center;
 
     gap: 20px;
-
+	
+	
+	
     border-radius: 50px;
 
     background:
@@ -95,6 +97,8 @@ body {
         transform 0.25s ease,
         background 0.25s ease,
         box-shadow 0.25s ease;
+        
+    margin-bottom: 10px;    
 
 }
 
@@ -1237,4 +1241,1057 @@ body {
 
     box-shadow:
         0 0 0 1px rgba(70, 40, 60, 0.12);
+}
+
+
+
+
+/* =====================================
+   select_birth - 이름 성별 넣기
+===================================== */
+
+.compatibility-container {
+    width: 100%;
+    min-height: 100vh;
+
+    position: relative;
+
+    background-image: url("../images/couple_visual.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+/* =====================================
+   연애 궁합 입력 영역
+===================================== */
+
+/* 제목 */
+.compatibility-container > h1 {
+    position: absolute;
+
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+
+    color: #ead9dc;
+    font-size: 30px;
+    font-weight: 700;
+    
+  	text-shadow: 2px 2px 5px rgba(70, 40, 90, 0.7);
+
+    z-index: 2;
+}
+
+
+/* 나의 정보 / 상대방 정보 */
+.compatibility-container .birth-section {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 760px;
+	
+    text-align: center;
+
+    color: #5d456d;
+
+    z-index: 2;
+}
+
+
+/* 나의 정보 위치 */
+.compatibility-container .birth-section:nth-of-type(1) {
+    top: 35%;
+}
+
+
+/* 상대방 정보 위치 */
+.compatibility-container .birth-section:nth-of-type(2) {
+    top: 50%;
+}
+
+
+/* 나의 정보 / 상대방 정보 제목 */
+.compatibility-container .birth-section h2 {
+    margin: 0 0 14px;
+
+    color: #765785;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+/* 이름, 생년월일 등의 글씨 */
+.compatibility-container .birth-section label {
+    margin-left: 10px;
+    margin-right: 5px;
+
+    color: #665070;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* 첫 번째 label은 왼쪽 여백 제거 */
+.compatibility-container .birth-section label:first-of-type {
+    margin-left: 0;
+}
+
+
+/* 입력창 + 셀렉트박스 */
+.compatibility-container .birth-section input,
+.compatibility-container .birth-section select {
+    height: 34px;
+
+    padding: 4px 8px;
+
+    border: 1px solid #c8add2;
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    color: #594663;
+
+    font-size: 13px;
+
+    outline: none;
+}
+
+
+/* 이름 */
+.compatibility-container .birth-section input[type="text"] {
+    width: 145px;
+}
+
+
+/* 생년월일 */
+.compatibility-container .birth-section input[type="text"] {
+    width: 145px;
+}
+
+
+/* 출생시간 */
+.compatibility-container .birth-section select {
+    min-width: 72px;
+}
+
+
+/* 입력창 클릭 */
+.compatibility-container .birth-section input:focus,
+.compatibility-container .birth-section select:focus {
+    border-color: #9e78b1;
+
+    box-shadow: 0 0 0 3px rgba(158, 120, 177, 0.15);
+}
+
+
+/* =====================================
+   궁합 보기 버튼
+===================================== */
+
+
+/* =====================================
+   궁합 페이지 버튼 영역
+===================================== */
+
+.compatibility-buttons {
+    position: absolute;
+
+    top: 78%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    z-index: 3;
+}
+
+
+/* 홈으로 + 궁합보기 공통 */
+
+.homeBtn,
+#compatibilityBtn {
+    width: 190px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #cf91b3;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 16px rgba(91, 48, 79, 0.20);
+
+    transition: 0.25s;
+}
+
+
+
+
+/* 홈으로 링크 */
+
+.homeBtn {
+    text-decoration: none;
+}
+
+
+/* hover */
+
+.homeBtn:hover,
+#compatibilityBtn:hover {
+    background: #c07fa4;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 9px 20px rgba(91, 48, 79, 0.28);
+}
+
+.compatibility-buttons .homeBtn {
+    background: #ffffff !important;
+    color: #765785 !important;
+    border: 1px solid #c8add2 !important;
+    text-decoration: none !important;
+}
+
+/* =========================
+   궁합 결과 모달
+========================= */
+
+.result-modal {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    z-index: 9999;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 모달 내용 박스 */
+.result-modal-content {
+    position: relative;
+
+    width: 520px;
+    max-width: 90%;
+
+    padding: 45px 40px 35px;
+
+    background: rgba(248, 242, 255, 0.97);
+
+    border: 1px solid #c7acd6;
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+
+    color: #594663;
+}
+
+
+/* 오른쪽 위 X */
+.modal-close-btn {
+    position: absolute;
+
+    top: 14px;
+    right: 18px;
+
+    border: none;
+    background: transparent;
+
+    font-size: 30px;
+
+    color: #81668f;
+
+    cursor: pointer;
+}
+
+
+/* 결과 이름 */
+.compatibility-result h2 {
+    margin: 0 0 16px;
+
+    font-size: 25px;
+
+    color: #684c78;
+}
+
+
+/* 점수 */
+.compatibility-result h3 {
+    margin: 0 0 18px;
+
+    font-size: 28px;
+
+    color: #9b68ae;
+}
+
+
+/* 결과 문구 */
+.compatibility-result p {
+    margin: 0 auto;
+
+    max-width: 430px;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: #66536f;
+}
+
+
+/* 아래 닫기 버튼 */
+.modal-bottom-btn {
+    margin-top: 28px;
+
+    padding: 10px 32px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #a779b9;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.modal-bottom-btn:hover {
+    background: #9165a3;
+}
+
+/* ==================================================
+   SELECT BIRTH - RESPONSIVE
+   한국어 / 일본어 공통
+================================================== */
+
+
+/* =========================================
+   태블릿 / 작은 브라우저
+   900px 이하
+========================================= */
+
+@media (max-width: 900px) {
+
+    /* 전체 페이지 */
+    .compatibility-container {
+        width: 100%;
+        min-height: 100svh;
+        height: auto;
+
+        padding:
+            145px
+            20px
+            90px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        background-position:
+            center top;
+    }
+
+
+    /* =========================
+       제목
+    ========================= */
+
+    .compatibility-container > h1 {
+
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        transform: none;
+
+        width: min(90%, 600px);
+
+        margin:
+            0 auto
+            42px;
+
+        text-align: center;
+
+        font-size:
+            clamp(24px, 4vw, 30px);
+
+        line-height: 1.45;
+    }
+
+
+    /* =========================
+       나의 정보 / 상대방 정보
+    ========================= */
+
+    .compatibility-container .birth-section {
+
+        position: relative;
+
+        top: auto !important;
+        left: auto;
+
+        transform: none;
+
+        width:
+            min(92%, 640px);
+
+        margin:
+            0 auto
+            26px;
+
+        padding:
+            24px 28px;
+
+        display: grid;
+
+        grid-template-columns:
+            110px minmax(0, 1fr);
+
+        gap:
+            12px 14px;
+
+        text-align: left;
+
+        background:
+            rgba(248, 240, 252, 0.78);
+
+        border:
+            1px solid
+            rgba(181, 148, 196, 0.45);
+
+        border-radius:
+            22px;
+
+        backdrop-filter:
+            blur(5px);
+
+        box-shadow:
+            0 8px 25px
+            rgba(75, 45, 90, 0.10);
+    }
+
+
+    /* 기존 absolute top 제거 */
+    .compatibility-container
+    .birth-section:nth-of-type(1),
+
+    .compatibility-container
+    .birth-section:nth-of-type(2) {
+
+        top: auto;
+    }
+
+
+    /* 정보 제목 */
+    .compatibility-container
+    .birth-section h2 {
+
+        grid-column:
+            1 / -1;
+
+        margin:
+            0 0 12px;
+
+        text-align: center;
+
+        font-size: 21px;
+    }
+
+
+    /* label */
+    .compatibility-container
+    .birth-section label {
+
+        margin: 0 !important;
+
+        align-self: center;
+
+        font-size: 14px;
+
+        text-align: right;
+    }
+
+
+    /* input / select */
+    .compatibility-container
+    .birth-section input,
+
+    .compatibility-container
+    .birth-section select {
+
+        width: 100% !important;
+        min-width: 0 !important;
+
+        height: 44px;
+
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       궁합 보기 버튼
+    ========================= */
+
+    #compatibilityBtn {
+
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        transform: none;
+
+        width:
+            min(70%, 240px);
+
+        height: 54px;
+
+        margin:
+            32px auto
+            0;
+
+        font-size: 16px;
+    }
+
+
+    #compatibilityBtn:hover {
+
+        transform:
+            translateY(-3px);
+    }
+
+
+    /* =========================
+       결과 모달
+    ========================= */
+
+    .result-modal-content {
+
+        width:
+            min(88%, 520px);
+
+        max-width: none;
+
+        padding:
+            44px
+            30px
+            30px;
+    }
+
+}
+
+
+
+/* =========================================
+   모바일
+   600px 이하
+========================================= */
+
+@media (max-width: 600px) {
+
+    .compatibility-container {
+
+        min-height:
+            100svh;
+
+        padding:
+            120px
+            14px
+            70px;
+
+        background-position:
+            center top;
+    }
+
+
+    /* =========================
+       제목
+    ========================= */
+
+    .compatibility-container > h1 {
+
+        width: 94%;
+
+        margin-bottom: 28px;
+
+        font-size:
+            clamp(22px, 6vw, 26px);
+
+        line-height: 1.4;
+    }
+
+
+    /* =========================
+       입력 영역
+    ========================= */
+
+    .compatibility-container
+    .birth-section {
+
+        width: 100%;
+
+        padding:
+            20px 18px;
+
+        margin-bottom: 20px;
+
+        grid-template-columns:
+            92px minmax(0, 1fr);
+
+        gap:
+            11px 10px;
+
+        border-radius: 18px;
+    }
+
+
+    .compatibility-container
+    .birth-section h2 {
+
+        margin-bottom: 10px;
+
+        font-size: 19px;
+    }
+
+
+    .compatibility-container
+    .birth-section label {
+
+        font-size: 13px;
+    }
+
+
+    .compatibility-container
+    .birth-section input,
+
+    .compatibility-container
+    .birth-section select {
+
+        width: 100% !important;
+
+        height: 43px;
+
+        padding:
+            5px 8px;
+
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       버튼
+    ========================= */
+
+    #compatibilityBtn {
+
+        width:
+            min(72vw, 220px);
+
+        height: 52px;
+
+        margin-top: 28px;
+
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       모달
+    ========================= */
+
+    .result-modal {
+
+        padding: 14px;
+    }
+
+
+    .result-modal-content {
+
+        width: 100%;
+
+        max-width: none;
+
+        padding:
+            42px
+            20px
+            25px;
+
+        border-radius: 20px;
+    }
+
+
+    .compatibility-result h2 {
+
+        margin-bottom: 13px;
+
+        font-size:
+            clamp(19px, 5.5vw, 24px);
+    }
+
+
+    .compatibility-result h3 {
+
+        margin-bottom: 15px;
+
+        font-size:
+            clamp(22px, 6.5vw, 27px);
+    }
+
+
+    .compatibility-result p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .modal-bottom-btn {
+
+        margin-top: 22px;
+
+        padding:
+            10px 28px;
+    }
+
+
+    /* =========================
+       언어 선택
+    ========================= */
+
+    .language-header {
+
+        top: 10px;
+        right: 10px;
+
+        gap: 6px;
+
+        padding:
+            6px 10px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+
+/* =========================================
+   작은 모바일
+   430px 이하
+
+   입력칸을 완전히 세로 배치
+========================================= */
+
+@media (max-width: 430px) {
+
+    .compatibility-container {
+
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .compatibility-container
+    .birth-section {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 7px;
+
+        padding:
+            18px 16px;
+    }
+
+
+    .compatibility-container
+    .birth-section h2 {
+
+        grid-column:
+            1;
+
+        margin-bottom: 9px;
+    }
+
+
+    .compatibility-container
+    .birth-section label {
+
+        text-align: left;
+
+        margin-top: 5px !important;
+    }
+
+
+    .compatibility-container
+    .birth-section input,
+
+    .compatibility-container
+    .birth-section select {
+
+        width: 100% !important;
+
+        height: 44px;
+    }
+
+
+    #compatibilityBtn {
+
+        width:
+            min(76vw, 210px);
+    }
+
+}
+
+/* PC */
+.compatibility-buttons {
+    position: absolute;
+
+    top: 78%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+
+    width: max-content;
+
+    z-index: 5;
+}
+
+
+/* 버튼 공통 */
+.compatibility-buttons .homeBtn,
+.compatibility-buttons #compatibilityBtn {
+
+    position: static !important;
+
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+
+    transform: none !important;
+
+    width: 190px;
+    height: 52px;
+
+    margin: 0 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #cf91b3;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 16px rgba(91, 48, 79, 0.20);
+
+    transition: 0.25s;
+}
+
+
+/* hover */
+.compatibility-buttons .homeBtn:hover,
+.compatibility-buttons #compatibilityBtn:hover {
+
+    background: #c07fa4;
+
+    transform: translateY(-3px) !important;
+
+    box-shadow:
+        0 9px 20px rgba(91, 48, 79, 0.28);
+}
+
+
+
+/* ==================================================
+   태블릿 / 반응형
+================================================== */
+
+@media (max-width: 900px) {
+
+    .compatibility-container {
+
+        min-height: 100svh;
+
+        height: auto;
+
+        padding-bottom: 70px;
+    }
+
+
+    /*
+       여기 중요!
+       버튼 영역을 absolute에서 일반 문서 흐름으로 변경
+    */
+    .compatibility-buttons {
+
+        position: static !important;
+
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+
+        transform: none !important;
+
+        width: 100%;
+
+        margin: 30px auto 0;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 16px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .compatibility-buttons .homeBtn,
+    .compatibility-buttons #compatibilityBtn {
+
+        position: static !important;
+
+        top: auto !important;
+        left: auto !important;
+
+        transform: none !important;
+
+        width: min(40vw, 220px);
+
+        height: 54px;
+
+        margin: 0 !important;
+    }
+
+
+    .compatibility-buttons .homeBtn:hover,
+    .compatibility-buttons #compatibilityBtn:hover {
+
+        transform: translateY(-3px) !important;
+    }
+
+}
+
+
+
+/* ==================================================
+   모바일
+================================================== */
+
+@media (max-width: 600px) {
+
+    .compatibility-buttons {
+
+        margin-top: 24px;
+
+        gap: 10px;
+    }
+
+
+    .compatibility-buttons .homeBtn,
+    .compatibility-buttons #compatibilityBtn {
+
+        width: 43vw;
+
+        max-width: 190px;
+
+        height: 50px;
+
+        font-size: 14px;
+    }
+
+}
+
+
+
+/* ==================================================
+   아주 작은 모바일
+================================================== */
+
+@media (max-width: 430px) {
+
+    .compatibility-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 10px;
+    }
+
+
+    .compatibility-buttons .homeBtn,
+    .compatibility-buttons #compatibilityBtn {
+
+        width: min(76vw, 230px);
+
+        max-width: none;
+
+        height: 50px;
+    }
+
 }

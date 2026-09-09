@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>RE:LOVE | 復縁できる可能性は？</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<header class="language-header">
+
+    <a href="select_birth.html" id="koLink">
+        <svg class="flag-icon" viewBox="0 0 36 24" aria-hidden="true">
+            <rect width="36" height="24" fill="#fff"/>
+            <circle cx="18" cy="12" r="6" fill="#cd2e3a"/>
+            <path d="M12 12a6 6 0 0 0 12 0a6 3 0 0 1-12 0z" fill="#0047a0"/>
+        </svg>
+        한국어
+    </a>
+
+    <span class="language-divider">|</span>
+
+    <a href="select_birth_jp.html" id="jpLink" class="active">
+        <svg class="flag-icon" viewBox="0 0 36 24" aria-hidden="true">
+            <rect width="36" height="24" fill="#fff"/>
+            <circle cx="18" cy="12" r="6" fill="#bc002d"/>
+        </svg>
+        日本語
+    </a>
+
+</header>
+
+
+<body class="jp">
+
+    <main class="compatibility-container">
+
+        <h1>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            別れたあの人と<br>
+            もう一度やり直せる？
+        </h1>
+
+
+        <!-- 自分の情報 -->
+        <section class="birth-section">
+
+            <h2>あなたの情報</h2>
+
+            <label for="myName">名前</label>
+
+            <input
+                type="text"
+                id="myName"
+                placeholder="名前を入力"
+            >
+
+
+            <label for="myBirth">生年月日</label>
+
+            <input
+                type="text"
+                id="myBirth"
+                placeholder="8桁で入力"
+                maxlength="10"
+                inputmode="numeric"
+            >
+
+
+            <label for="myHour">出生時間</label>
+
+            <select id="myHour">
+
+                <option value="-1">不明</option>
+
+                <option value="0">00時</option>
+                <option value="1">01時</option>
+                <option value="2">02時</option>
+                <option value="3">03時</option>
+                <option value="4">04時</option>
+                <option value="5">05時</option>
+                <option value="6">06時</option>
+                <option value="7">07時</option>
+                <option value="8">08時</option>
+                <option value="9">09時</option>
+                <option value="10">10時</option>
+                <option value="11">11時</option>
+                <option value="12">12時</option>
+                <option value="13">13時</option>
+                <option value="14">14時</option>
+                <option value="15">15時</option>
+                <option value="16">16時</option>
+                <option value="17">17時</option>
+                <option value="18">18時</option>
+                <option value="19">19時</option>
+                <option value="20">20時</option>
+                <option value="21">21時</option>
+                <option value="22">22時</option>
+                <option value="23">23時</option>
+
+            </select>
+
+
+            <label for="myGender">性別</label>
+
+            <select id="myGender">
+
+                <option value="">選択</option>
+                <option value="F">女性</option>
+                <option value="M">男性</option>
+
+            </select>
+
+        </section>
+
+
+        <!-- 相手の情報 -->
+        <section class="birth-section">
+
+            <h2>お相手の情報</h2>
+
+            <label for="partnerName">名前</label>
+
+            <input
+                type="text"
+                id="partnerName"
+                placeholder="名前を入力"
+            >
+
+
+            <label for="partnerBirth">生年月日</label>
+
+            <input
+                type="text"
+                id="partnerBirth"
+                placeholder="8桁で入力"
+                maxlength="10"
+                inputmode="numeric"
+            >
+
+
+            <label for="partnerHour">出生時間</label>
+
+            <select id="partnerHour">
+
+                <option value="-1">不明</option>
+
+                <option value="0">00時</option>
+                <option value="1">01時</option>
+                <option value="2">02時</option>
+                <option value="3">03時</option>
+                <option value="4">04時</option>
+                <option value="5">05時</option>
+                <option value="6">06時</option>
+                <option value="7">07時</option>
+                <option value="8">08時</option>
+                <option value="9">09時</option>
+                <option value="10">10時</option>
+                <option value="11">11時</option>
+                <option value="12">12時</option>
+                <option value="13">13時</option>
+                <option value="14">14時</option>
+                <option value="15">15時</option>
+                <option value="16">16時</option>
+                <option value="17">17時</option>
+                <option value="18">18時</option>
+                <option value="19">19時</option>
+                <option value="20">20時</option>
+                <option value="21">21時</option>
+                <option value="22">22時</option>
+                <option value="23">23時</option>
+
+            </select>
+
+
+            <label for="partnerGender">性別</label>
+
+            <select id="partnerGender">
+
+                <option value="">選択</option>
+                <option value="F">女性</option>
+                <option value="M">男性</option>
+
+            </select>
+
+        </section>
+
+
+        <div class="compatibility-buttons">
+
+    <a href="index_jp.html" class="homeBtn">
+        ホームへ
+    </a>
+
+    <button id="compatibilityBtn">
+        結果を見る
+    </button>
+
+</div>
+
+
+        <!-- 結果モーダル -->
+
+        <div id="resultModal" class="result-modal">
+
+            <div class="result-modal-content">
+
+                <button
+                    id="closeModalBtn"
+                    class="modal-close-btn">
+                    ×
+                </button>
+
+                <div id="result"></div>
+
+                <button
+                    id="closeModalBottomBtn"
+                    class="modal-bottom-btn">
+
+                    閉じる
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/select_birth.js"></script>
+
+</body>
+
+</html>

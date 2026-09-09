@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>RE:LOVE | 재회 성공률은?!</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<header class="language-header">
+
+    <a href="index.html" id="koLink">
+        <svg class="flag-icon" viewBox="0 0 36 24" aria-hidden="true">
+            <rect width="36" height="24" fill="#fff"/>
+            <circle cx="18" cy="12" r="6" fill="#cd2e3a"/>
+            <path d="M12 12a6 6 0 0 0 12 0a6 3 0 0 1-12 0z" fill="#0047a0"/>
+        </svg>
+        한국어
+    </a>
+
+    <span class="language-divider">|</span>
+
+    <a href="index_jp.html" id="jpLink">
+        <svg class="flag-icon" viewBox="0 0 36 24" aria-hidden="true">
+            <rect width="36" height="24" fill="#fff"/>
+            <circle cx="18" cy="12" r="6" fill="#bc002d"/>
+        </svg>
+        日本語
+    </a>
+
+</header>
+
+<body>
+
+    <main class="compatibility-container">
+
+        <h1>&nbsp;&nbsp;헤어진 그 사람과<br> 
+        다시 만날 수 있을까?</h1>
+
+        <!-- 내 정보 -->
+        <section class="birth-section">
+            <h2>나의 정보</h2>
+
+            <label for="myName">이름</label>
+            <input
+                type="text"
+                id="myName"
+                placeholder="이름 입력"
+            >
+
+            <label for="myBirth">생년월일</label>
+            <input
+                type="text"
+    			id="myBirth"
+    			placeholder="8자리 입력"
+    			maxlength="10"
+            >
+
+            <label for="myHour">출생시간</label>
+            <select id="myHour">
+                <option value="-1">모름</option>
+                <option value="0">00시</option>
+                <option value="1">01시</option>
+                <option value="2">02시</option>
+                <option value="3">03시</option>
+                <option value="4">04시</option>
+                <option value="5">05시</option>
+                <option value="6">06시</option>
+                <option value="7">07시</option>
+                <option value="8">08시</option>
+                <option value="9">09시</option>
+                <option value="10">10시</option>
+                <option value="11">11시</option>
+                <option value="12">12시</option>
+                <option value="13">13시</option>
+                <option value="14">14시</option>
+                <option value="15">15시</option>
+                <option value="16">16시</option>
+                <option value="17">17시</option>
+                <option value="18">18시</option>
+                <option value="19">19시</option>
+                <option value="20">20시</option>
+                <option value="21">21시</option>
+                <option value="22">22시</option>
+                <option value="23">23시</option>
+            </select>
+
+            <label for="myGender">성별</label>
+            <select id="myGender">
+                <option value="">선택</option>
+                <option value="F">여성</option>
+                <option value="M">남성</option>
+            </select>
+        </section>
+
+        <!-- 상대방 정보 -->
+        <section class="birth-section">
+            <h2>상대방 정보</h2>
+
+            <label for="partnerName">이름</label>
+            <input
+                type="text"
+                id="partnerName"
+                placeholder="이름 입력"
+            >
+
+            <label for="partnerBirth">생년월일</label>
+            <input
+                type="text"
+    			id="partnerBirth"
+    			placeholder="8자리 입력"
+    			maxlength="10"
+            >
+
+            <label for="partnerHour">출생시간</label>
+            <select id="partnerHour">
+                <option value="-1">모름</option>
+                <option value="0">00시</option>
+                <option value="1">01시</option>
+                <option value="2">02시</option>
+                <option value="3">03시</option>
+                <option value="4">04시</option>
+                <option value="5">05시</option>
+                <option value="6">06시</option>
+                <option value="7">07시</option>
+                <option value="8">08시</option>
+                <option value="9">09시</option>
+                <option value="10">10시</option>
+                <option value="11">11시</option>
+                <option value="12">12시</option>
+                <option value="13">13시</option>
+                <option value="14">14시</option>
+                <option value="15">15시</option>
+                <option value="16">16시</option>
+                <option value="17">17시</option>
+                <option value="18">18시</option>
+                <option value="19">19시</option>
+                <option value="20">20시</option>
+                <option value="21">21시</option>
+                <option value="22">22시</option>
+                <option value="23">23시</option>
+            </select>
+
+            <label for="partnerGender">성별</label>
+            <select id="partnerGender">
+                <option value="">선택</option>
+                <option value="F">여성</option>
+                <option value="M">남성</option>
+            </select>
+        </section>
+
+        <div class="compatibility-buttons">
+
+    <a href="index.html" class="homeBtn">
+        홈으로
+    </a>
+
+    <button id="compatibilityBtn">
+        궁합 보기
+    </button>
+
+</div>
+
+
+        <!-- 궁합 결과 모달 -->
+		<div id="resultModal" class="result-modal">
+
+    <div class="result-modal-content">
+
+        <button id="closeModalBtn" class="modal-close-btn">×</button>
+
+        <div id="result"></div>
+
+        <button id="closeModalBottomBtn" class="modal-bottom-btn">
+            닫기
+        </button>
+
+    </div>
+
+</div>
+
+    </main>
+
+    <script src="js/select_birth.js"></script>
+</body>
+</html>
